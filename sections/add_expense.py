@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.markdown("# Add Expenses :floppy_disk:")
+st.markdown("# Add Expenses :heavy_plus_sign:")
 st.markdown("***")
 
 with st.form(key = "_add_exp_form"):
