@@ -13,3 +13,6 @@ with st.form(key = "_add_exp_form"):
     if st.form_submit_button("Add", type = 'primary' ):
         st.success('Expense Added Sucessfully', icon="✅")
 
+        # e = RuntimeError("Unable to Display Report")
+        # st.exception(e)
+
