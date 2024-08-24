@@ -10,9 +10,10 @@ financial-planning-concept-with-manager-or-executive-cfo-crafting-or.jpg\
 ?s=2048x2048&w=is&k=20&c=iyhk1WbUWUo6921DgUs7NqVaC__qS8fgzZeJkqp6bnE=
 """
 
-cover_image_path = "img.jpg"
+cover_image_path = "assets/expense_manager_cover.jpeg"
+
 st.image(
-    image = cover_image_url,
+    image = cover_image_path,
     caption = "Expense Manger",
     )
 
