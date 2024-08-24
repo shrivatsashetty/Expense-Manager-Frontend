@@ -37,7 +37,7 @@ with st.form(key = "_add_exp_form"):
         "textNote": text_note,
         "expenseCategory": expense_category,
         "transactionDate": transaction_date.day,  # type: ignore
-        "transactionMonth": transaction_date.month, # type: ignore
+        "transactionMonth": transaction_date.strftime('%B'), # type: ignore
         "transactionYear": transaction_date.year, # type: ignore
     }
 
