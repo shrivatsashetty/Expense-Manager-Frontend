@@ -21,11 +21,12 @@ try:
         transactions_df = pd.DataFrame(transactions_data)
         
         if len(transactions_df) > 0:
+            st.markdown("***")
+            st.markdown("## Transactions History :currency_exchange: ")
+            st.dataframe(transactions_df)
+                    
             st.markdown("***") # this adds a horizontal ruler
             st.markdown("## Key-Metrics :key:")
-
-            st.markdown("### Transactions Data:")
-            st.dataframe(transactions_df)
 
             col11, col12, col13 = st.columns(3, gap ='small', vertical_alignment = 'bottom')
 
@@ -64,8 +65,7 @@ try:
             st.markdown("***")
             st.markdown("## Month-Wise Expenditure")
 
-            st.dataframe(transactions_df)
-
+            # bar chart to show monthly expenditure
             fig = px.bar(
                 transactions_df, 
                 x = 'transactionMonth', 
@@ -78,6 +78,7 @@ try:
 
             # crating data to monitor daily spending trends
             st.markdown("***")
+            st.markdown("## Analysis")
             st.markdown("## Daily Spending Trends")
     
             fig = px.line(transactions_df, x='transactionDate', y='transactionAmount', color='transactionMonth', 
@@ -86,7 +87,7 @@ try:
             st.plotly_chart(fig, use_container_width=True)
         
         else:
-            st.markdown("### Empty Data by API")
+            st.markdown("### No Transactions Yet :currency_exchange:")
 except Exception as err:
     st.markdown("### Server Not Found")
-    st.write(err)
+    # st.write(err)
