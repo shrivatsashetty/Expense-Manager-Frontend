@@ -1,113 +1,88 @@
 import streamlit as st
 import plotly.express as px
+import requests
 
 import pandas as pd
 import numpy as np
 
+get_url = "http://localhost:8080/transactions"
+
 st.title(":clipboard: REPORT DASHBOARD")
 
-st.markdown("***") # this adds a horizontal ruler
-st.markdown("## Key-Metrics :key:")
+try:
+    
+    get_response = requests.get(get_url)
 
-col11, col12, col13 = st.columns(3, gap ='small', vertical_alignment = 'bottom')
+    if get_response.status_code == 200:
 
-with col11:
-    st.metric(
-        label = ":blue[Username]" , 
-        value = 'Aman' ,
-        help = "The name of the Dataset that was assesed" , 
-    )
+        transactions_data = get_response.json()
+        st.markdown("### Transactions Data:")
+        st.write(get_response.json())
 
-with col12:
-    st.metric(
-        label = ":green[Total Income]",
-        value = 25000,
-        delta = "5.4%", # indicates rate of increase or deacrease
-        delta_color = "normal", # indicates color coding for delta value
-        help = "Total Income for the Current Month"
-    )
+        transactions_df = pd.DataFrame(transactions_data)
+        st.dataframe(transactions_df)
 
-with col13:
-    st.metric(
-        label = ":red[Total Expenditure]",
-        value = 16000,
-        delta = "6.2%",
-        delta_color = "inverse",
-        help = "Total Expenditure so far for the Current Month"
-    )
+        st.markdown("***") # this adds a horizontal ruler
+        st.markdown("## Key-Metrics :key:")
 
-st.markdown("***")
-st.markdown("## Category Wise Expenditure")
+        col11, col12, col13 = st.columns(3, gap ='small', vertical_alignment = 'bottom')
 
-# Creating a dictionary for category-wise expenditure
-cat_wise_exp_data = {
-    'Category': ['Rent', 'Tax', 'Food', 'Travel', 'Investments'],
-    'Amount': [5000, 3000, 4000, 2000, 2000]  # Distributed the total INR 16000
-}
+        with col11:
+            st.metric(
+                label = ":blue[Total Transactions]" , 
+                value = len(transactions_df['transactionAmount']) ,
+                help = "Username" , 
+            )
 
-# Converting the dictionary to a pandas DataFrame
-cat_wise_exp_df = pd.DataFrame(cat_wise_exp_data)
+        with col12:
+            st.metric(
+                label = ":green[Avg Spending Per Day]",
+                value = int(transactions_df['transactionAmount'].mean()),
+                delta = "5.4%", # indicates rate of increase or deacrease
+                delta_color = "normal", # indicates color coding for delta value
+                help = "Total Income for the Current Month"
+            )
 
-# Displaying the DataFrame
-fig = px.pie(cat_wise_exp_df, values = 'Amount', names = 'Category', hole=.2, )
-st.plotly_chart(fig, use_container_width=True)
+        with col13:
+            st.metric(
+                label = ":red[Max Single Transaction]",
+                value = transactions_df['transactionAmount'].max(),
+                delta = "6.2%",
+                delta_color = "inverse",
+                help = "Total Expenditure so far for the Current Month"
+            )
 
-st.markdown("***")
-st.markdown("## Monthly-Wise Expenditure")
-# creating a dictionary for montly expenditure
-monthly_expenditure_data = {
-    'Month': ['January', 'February', 'March', 'April', 'May', 'June'],
-    'Total_Expenditure': [22000, 18000, 20000, 15000, 24000, 23000]  # all Values are less than INR 25000
-}
+        st.markdown("***")
+        st.markdown("## Category Wise Expenditure")
 
-# Converting the dictionary to a pandas DataFrame
-monthly_expenditure_df = pd.DataFrame(monthly_expenditure_data)
+        # Displaying the DataFrame
+        fig = px.pie(transactions_df, values = 'transactionAmount', names = 'expenseCategory', hole=.2, )
+        st.plotly_chart(fig, use_container_width=True)
 
-fig = px.bar(
-    monthly_expenditure_df, 
-    x = 'Month', 
-    y = 'Total_Expenditure', 
-    title = 'Total Monthly Expenditure So Far',
-    color = 'Month',
-    )
+        st.markdown("***")
+        st.markdown("## Month-Wise Expenditure")
 
-st.plotly_chart(fig, use_container_width=True)
+        st.dataframe(transactions_df)
 
-# crating data to monitor daily spending trends
-st.markdown("***")
-st.markdown("## Daily Spending Trends")
-# Assuming 30 days for both June and July
-# Creating a range of days from 1 to 30 for both June and July
-days_in_june = np.arange(1, 31)
-days_in_july = np.arange(1, 28)
+        fig = px.bar(
+            transactions_df, 
+            x = 'transactionMonth', 
+            y = 'transactionAmount', 
+            title = 'Total Monthly Expenditure So Far',
+            color = 'expenseCategory',
+            )
 
-# Generate random spending data for each day ensuring the total does not exceed INR 25000 per month
-np.random.seed(0)  # For reproducibility
-june_expenditure = np.random.randint(500, 1500, size=len(days_in_june))
-july_expenditure = np.random.randint(500, 1500, size=len(days_in_july))
+        st.plotly_chart(fig, use_container_width=True)
 
-# Ensure the total expenditure for each month doesn't exceed INR 25000
-june_expenditure = june_expenditure * (25000 / june_expenditure.sum())
-july_expenditure = july_expenditure * (25000 / july_expenditure.sum())
+        # crating data to monitor daily spending trends
+        st.markdown("***")
+        st.markdown("## Daily Spending Trends")
+ 
+        fig = px.line(transactions_df, x='transactionDate', y='transactionAmount', color='transactionMonth', 
+                    title='Daily Spending Trends for Past and Current Month')
 
-# Creating DataFrame for June
-df_june = pd.DataFrame({
-    'Date': days_in_june,
-    'Expenditure': june_expenditure,
-    'Month': 'June'
-})
+        st.plotly_chart(fig, use_container_width=True)
 
-# Creating DataFrame for July
-df_july = pd.DataFrame({
-    'Date': days_in_july,
-    'Expenditure': july_expenditure,
-    'Month': 'July'
-})
-
-# Combine both DataFrames
-df_spending_trends = pd.concat([df_june, df_july])
-
-fig = px.line(df_spending_trends, x='Date', y='Expenditure', color='Month', 
-              title='Daily Spending Trends for Past and Current Month')
-
-st.plotly_chart(fig, use_container_width=True)
+except Exception as err:
+    st.markdown("### Data Not Found")
+    st.write(err)
