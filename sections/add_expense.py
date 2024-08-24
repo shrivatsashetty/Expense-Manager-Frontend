@@ -29,7 +29,7 @@ with st.form(key = "_add_exp_form"):
                                      value = datetime.date.today(),
                                      key = "_transaction_date_selector",
                                      help = "Select Transaction Date",
-                                     format = "DD/MM/YYYY",
+                                     format = "YYYY/MM/DD",
                                      )
 
     transaction_data: dict = {
