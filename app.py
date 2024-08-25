@@ -4,7 +4,7 @@ user_management_page = st.Page("sections/user_management.py", title = "Manage Us
 home_page = st.Page("sections/homepage.py", title = "Home", icon = "🏠")
 analysis_page = st.Page("sections/analysis.py", title = "Analysis", icon = "🔎")
 add_expense_page = st.Page("sections/add_expense.py", title = "Add Expense", icon = "➕")
-send_report = st.Page("sections/send_report.py", title = "Send Report", icon = "✉️")
+send_report = st.Page("sections/send_report.py", title = "Mail Report", icon = "✉️")
 
 pages = st.navigation(
     {
