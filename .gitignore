@@ -1,2 +1,3 @@
 .venv
 .vscode
+.streamlit/secrets.toml
