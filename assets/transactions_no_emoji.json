@@ -1,0 +1,504 @@
+[
+
+    {
+        "transactionAmount": 3500,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "January",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3200,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "January",
+
+        "transactionYear": 2024
+    },
+
+
+
+    {
+        "transactionAmount": 1000,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "January",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2500,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "January",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 700,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "January",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3700,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "February",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3000,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "February",
+
+        "transactionYear": 2024
+    },
+
+
+
+    {
+        "transactionAmount": 5000,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "February",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2000,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "February",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1000,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "February",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 4000,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "March",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2800,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "March",
+
+        "transactionYear": 2024
+    },
+
+
+
+    {
+        "transactionAmount": 6000,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "March",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1200,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "March",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1000,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "March",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3900,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "April",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3400,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "April",
+
+        "transactionYear": 2024
+    },
+
+
+    {
+        "transactionAmount": 6500,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "April",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1800,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "April",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1400,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "April",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3300,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "May",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2000,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "May",
+
+        "transactionYear": 2024
+    },
+
+
+    {
+        "transactionAmount": 7000,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "May",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1700,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "May",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 900,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "May",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 3090,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "June",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2600,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "June",
+
+        "transactionYear": 2024
+    },
+
+
+    {
+        "transactionAmount": 7500,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "June",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1900,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "June",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1000,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "June",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 4200,
+
+        "expenseCategory": "Food",
+
+        "textNote": "Brunch",
+
+        "transactionDate": 5,
+
+        "transactionMonth": "July",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2800,
+
+        "expenseCategory": "Travel",
+
+        "textNote": "Daily Commute",
+
+        "transactionDate": 10,
+
+        "transactionMonth": "July",
+
+        "transactionYear": 2024
+    },
+
+
+    {
+        "transactionAmount": 8000,
+
+        "expenseCategory": "Rent",
+
+        "textNote": "Monthly Rent",
+
+        "transactionDate": 15,
+
+        "transactionMonth": "July",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 2000,
+
+        "expenseCategory": "Investment",
+
+        "textNote": "Savings",
+
+        "transactionDate": 20,
+
+        "transactionMonth": "July",
+
+        "transactionYear": 2024
+    },
+
+    {
+        "transactionAmount": 1400,
+
+        "expenseCategory": "Tax",
+
+        "textNote": "GST + IT + Others",
+
+        "transactionDate": 25,
+
+        "transactionMonth": "July",
+
+        "transactionYear": 2024
+    }
+
+]
+    
