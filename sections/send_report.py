@@ -12,10 +12,10 @@ st.markdown("***")
 
 with st.form(key = "_add_exp_form"):
     st.markdown("### Send Report Form :speech_balloon:")
-    recepient_email = st.text_input(label = "Email Address", placeholder = "Enter E-Mail Address of the Recepient")
-    email_subject = st.text_input(label = "Enter Subject", placeholder = "Enter Subject for the E-Mail")
+    recepient_email = st.text_input(label = "Recepient Email Address", placeholder = "jhondoe@example.com")
+    email_subject = st.text_input(label = "Enter Subject", placeholder = "Expense Statistics with Attached Report ")
     email_body = st.text_area(label = "Email Body(Max 500 Characters)", placeholder = "Hello Sir/Ma'am...", max_chars = 500) 
-    email_attachment = st.file_uploader(label = "Upload the Report File", type = ["pdf", "png", "jpg"] )
+    email_attachment = st.file_uploader(label = "Add Report File as Attachment", type = ["pdf", "png", "jpg"] )
 
     sender_email = st.secrets.outlook_credentials.outlook_mail_id
     sender_password = st.secrets.outlook_credentials.outlook_password
