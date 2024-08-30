@@ -81,8 +81,6 @@ with st.form(key = "_add_exp_form"):
             st.warning("Server Not Found", icon = "⚠️")
         except Exception as e:
             st.warning("Some Error Occured", icon = "🚫")
-            # st.write(e)
-
 
 # option for adding batch transaction
 

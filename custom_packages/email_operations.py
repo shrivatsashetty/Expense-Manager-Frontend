@@ -34,7 +34,7 @@ def send_email(sender_email, sender_password, recepient_email, email_subject, em
     with smtplib.SMTP('smtp.office365.com', 587) as session:
         session = smtplib.SMTP('smtp.office365.com', 587) #use gmail with port
         session.ehlo()
-        session.starttls() #enable security
+        session.starttls() #enable Transport Layer Security(TLS)
         session.login(sender_email, sender_password) # login with mail_id and password
         text = message.as_string()
         session.sendmail(sender_email, recepient_email, text)
